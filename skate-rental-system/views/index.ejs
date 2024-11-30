@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skate Rental System</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Skate Rental Items</h1>
+
+    <form action="/items" method="POST">
+        <h2>Add Item</h2>
+        <input type="text" name="name" placeholder="Item name" required>
+        <textarea name="description" placeholder="Description"></textarea>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>All Items</h2>
+    <ul>
+        <% items.forEach(item => { %>
+            <li>
+                <%= item.name %> - <%= item.description %> 
+                <form action="/items/<%= item.id %>/edit" method="POST">
+                    <input type="text" name="name" value="<%= item.name %>">
+                    <textarea name="description"><%= item.description %></textarea>
+                    <button type="submit">Update</button>
+                </form>
+                <form action="/items/<%= item.id %>/delete" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
