@@ -1,0 +1,121 @@
+/* General page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+form {
+    margin: 25px 0;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.2s;
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 6px 18px rgba(0, 86, 179, 0.3);
+}
+
+button.delete {
+    background-color: #dc3545;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+    box-shadow: 0px 6px 18px rgba(220, 53, 69, 0.3);
+}
+
+button.update {
+    background-color: #28a745;
+}
+
+button.update:hover {
+    background-color: #218838;
+    box-shadow: 0px 6px 18px rgba(40, 167, 69, 0.3);
+}
+
+form.inline {
+    display: inline-block;
+    margin: 0;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
